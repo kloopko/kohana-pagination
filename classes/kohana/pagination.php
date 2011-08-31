@@ -96,7 +96,11 @@ class Kohana_Pagination {
 		$this->_route = $request->route();
 		
 		// Assign default route params
-		$this->_route_params = $request->param();
+		$this->_route_params = $request->param() + array(
+			'controller' => $request->controller(),
+			'action'     => $request->action(),
+			'directory'  => $request->directory(),
+		);
 		
 		// Pagination setup
 		$this->setup($config);
