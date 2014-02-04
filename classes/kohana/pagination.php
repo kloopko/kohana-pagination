@@ -90,13 +90,17 @@ class Kohana_Pagination {
 			$request = Request::current();
 		}
 		
+		//kohana v3 unset the controller action & directory from _params array
+		//use Request::process_uri to catch them all
+		$route_uri = Request::process_uri($request->uri());
+
 		$this->_request = $request;
 
 		// Assign default Route
-		$this->_route = $request->route();
+		$this->_route = $route_uri['route'];
 		
 		// Assign default route params
-		$this->_route_params = $request->param();
+		$this->_route_params = $route_uri['params'];
 		
 		// Pagination setup
 		$this->setup($config);
