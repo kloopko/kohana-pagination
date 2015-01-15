@@ -1,0 +1,42 @@
+{
+    "name": "seyfer/kohana-pagination",
+    "version": "3.2",
+    "type": "kohana-module",
+    "description": "Kohana module to manage pagination quick and easy",
+    "type": "kohana-module",
+    "authors": [
+        {
+            "name": "shadowhand",
+            "email": "hello@shadowhand.me",
+            "homepage": "http://shadowhand.me",
+            "role": "Developer"
+        },
+        {
+            "name": "kloopko",
+            "homepage": "http://kloopko.com"
+        },
+        {
+            "name": "seyfer",
+            "email": "seyferseed@mail.ru",
+            "homepage": "http://seyferseed.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "composer/installers": "1.*"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "classmap": [
+            "classes/"
+        ]
+    },
+    "extra": {
+        "installer-paths": {
+            "vendor/kohana/modules/{$name}/": [
+                "type:kohana-module"
+            ]
+        }
+    }
+}
